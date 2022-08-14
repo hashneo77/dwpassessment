@@ -28,7 +28,7 @@ public class TicketServiceImpl implements TicketService {
 	
 	
     @Override
-    public int purchaseTickets(Long accountId, TicketTypeRequest... ticketTypeRequests) throws InvalidPurchaseException {
+    public void purchaseTickets(Long accountId, TicketTypeRequest... ticketTypeRequests) throws InvalidPurchaseException {
     	int totalChildTickets=0,totalInfantTickets=0,totalAdultTickets=0,totalTickets = 0;
     	int totalAmount = 0;
     	tP = new TicketPaymentServiceImpl();
@@ -54,7 +54,6 @@ public class TicketServiceImpl implements TicketService {
 			System.out.println("Ticket Purchase Unsuccessfull,Please Try Again");
 		}
 		
-		return totalAmount;
 		
     }
 
