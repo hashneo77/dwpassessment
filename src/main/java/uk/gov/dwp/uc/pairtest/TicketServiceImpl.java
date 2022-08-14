@@ -52,6 +52,8 @@ public class TicketServiceImpl implements TicketService {
 			System.out.println("Ticket Purchase Successfull");
 		} catch (InvalidPurchaseException e) {
 			System.out.println("Ticket Purchase Unsuccessfull,Please Try Again");
+		} catch (Exception e) {
+			System.out.print("All other Exceptions");
 		}
 		
 		
